@@ -15,7 +15,7 @@ Paypal https://paypal.me/splatura
 
 
 # License
-Based upon work by bitluni 2019
+Inspired by the work of bitluni 2019
 Creative Commons Attribution ShareAlike 4.0
 https://creativecommons.org/licenses/by-sa/4.0/
 
