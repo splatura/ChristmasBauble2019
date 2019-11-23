@@ -54,7 +54,7 @@ void led(int n)
   PORTA.OUT = (PORTA.OUT & 0b00001111) | pinLvl[n];
 }
 
-const unsigned char chain[] = {6, 1, 7, 11, 2, 3, 8, 9, 0, 10};
+const unsigned char chain[] = {6, 1, 7, 11, 2, 3, 8, 9, 0, 10, 5, 4};
 
 void eyes(long t, long dt)
 {
@@ -82,11 +82,11 @@ void eyes(long t, long dt)
 
 void saw(long t, long dt)
 {
-  if(mode < 1) return;
+//  if(mode < 1) return;
   static int alt = 0;
-  alt ^= 5;
-  unsigned short l = ((t >> 5) + alt);
-  led(chain[l % 10]);
+  alt ^= 6;
+  unsigned short l = ((t >> 6) + alt);
+  led(chain[l % 12]);
 }
 
 const int notes = 40;
@@ -200,7 +200,7 @@ void loop()
   long dt = t - ot;
   ot = t;
     
-  eyes(t, dt);
+//  eyes(t, dt);
   saw(t, dt);
   sound(dt);
   
