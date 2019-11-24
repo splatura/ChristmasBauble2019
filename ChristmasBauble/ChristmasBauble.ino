@@ -89,8 +89,23 @@ void saw(long t, long dt)
   led(chain[l % 12]);
 }
 
-const int notes = 40;
+const int notes = 11;
 short melody[][3] = {
+  {0, NOTE_E5, 400},
+  {500, NOTE_E5, 400},
+  {1000, NOTE_E5, 800},
+  
+  {2000, NOTE_E5, 400},
+  {2500, NOTE_E5, 400},
+  {3000, NOTE_E5, 800},
+  
+  {4000, NOTE_E5, 400},
+  {4500, NOTE_G5, 400},
+  {5000, NOTE_C5, 600},
+  {5700, NOTE_D5, 200},
+  {6000, NOTE_E5, 800},
+};
+/*short melody[][3] = {
   {0, 1109, 100},
   {200, 740, 80},
   {400, 740, 120},
@@ -135,6 +150,7 @@ short melody[][3] = {
   {7600, 1109, 100},
   {7800, 698, 100}, 
 };
+*/
 
 void sound(long dt)
 {
